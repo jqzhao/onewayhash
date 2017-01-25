@@ -1,4 +1,5 @@
 # onewayhash
-generate jar file: mvn clean package -DskipTests
-generate war file: mvn clean package -DskipTests -P war
+generate a jar file: mvn clean package
+
+run the generated jar file in the background mode: nohup java -jar xxx.jar&
 

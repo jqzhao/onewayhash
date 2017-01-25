@@ -16,10 +16,12 @@ public class SHA3Util {
 
     public static String sha3Hash256(String in) {
         String out="";
+        log.info("Input to be hashed: "+in);
         try {
             SHA3.DigestSHA3 md = new SHA3.DigestSHA3(256);
             md.update(in.getBytes("UTF-8"));
             out = Hex.toHexString(md.digest());
+            log.info("Output hashed: "+out);
         } catch (UnsupportedEncodingException e) {
             log.error("Error during hashing with SHA3", e);
         }
