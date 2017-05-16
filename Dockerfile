@@ -28,7 +28,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Copy spring boot build artifacts to the working docker directory
 WORKDIR /tmp
-COPY ../../../. /tmp
+COPY . /tmp
 # Build the app
 RUN mvn package
 
